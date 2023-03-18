@@ -1,42 +1,47 @@
 #include <stdio.h>
 
 /**
- * main - This prints all possible different combinations of three digits
- * Return: This returns 0
+ * main - print triple combos
+ *
+ * Description: print triple digit combos
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int a = 48;
-	int b = 48;
-	int c = 48;
+	int i, j, k;
 
-	while
-		(a < 58)
+	i = 48;
+	j = 48;
+	k = 48;
+
+	while (i < 58)
+	{
+		j = i + 1;
+		while (j < 58)
 		{
-			b = a + 1;
-			while
-				(b < 58)
+			k = j + 1;
+			while (k < 58)
+			{
+				putchar(i);
+				putchar(j);
+				putchar(k);
+				if (i < 55 || j < 56 || k < 57)
 				{
-					c = b + 1;
-					while
-						(c < 58)
-						{
-							putchar(a);
-							putchar(b);
-							putchar(c);
-
-							if (a < 55 || b < 56 || c < 57)
-							{
-								putchar(44);
-								putchar(32);
-							}
-							c++;
-						}
-					b++;
+					putchar(44);
+					putchar(32);
 				}
-			a++;
+				k++;
+			}
+
+			j++;
 		}
+
+		i++;
+	}
+
 	putchar(10);
+
 	return (0);
 }
