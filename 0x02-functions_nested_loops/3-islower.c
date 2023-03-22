@@ -1,15 +1,19 @@
-#include "main.h"
+#include <stdio.h>
+
+void print_alphabet(void);
 
 /**
- * _islower - Return 1 if letter is lowercase, 0 if not.
- * @c: char type letter
- * Return: 1 if lowercase, 0 if not lowercase
- */
+* _islower - print a value
+* @c: input parameter
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 int _islower(int c)
-
-	if (c >= 97 && c <= 122)
+{
+	if (c >= 'a' && c <= 'z')
+	{
 		return (1);
-	else
-		return (0);
+	}
+	return (0);
 }

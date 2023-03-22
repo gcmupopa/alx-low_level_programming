@@ -1,19 +1,21 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - This prints _putchar followed by new line
- * Return: This returns 0
- */
+* main - print out a value
+* Description:
+* Return: return a value
+*/
 
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	char *string = "_putchar";
+
+	while (*string)
+	{
+		putchar(*string);
+		string++;
+	}
+	putchar('\n');
 	return (0);
 }
