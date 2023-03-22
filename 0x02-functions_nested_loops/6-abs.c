@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _abs - print value
- * @n: input parameter
- * Description: computes absolute value of an integer
- * Return: This returns string value
+ * _abs - compute the absolute value of an integer
+ * @n: int type number
+ * Return: absolute value of @n
  */
 
 int _abs(int)
@@ -17,5 +16,4 @@ int _abs(int)
 	{
 		return (-1 * n);
 	}
-	return (0);
 }

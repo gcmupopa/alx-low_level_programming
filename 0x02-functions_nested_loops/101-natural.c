@@ -1,24 +1,27 @@
+#include "main.h"
 #include <stdio.h>
+#include <math.h>
 
 /**
- * main - list all natural numbers multiples of 3 & 5
- *
- * Return: This returns 0
+ * main - main block
+ * Description: Print the sum of all multiples of 3 or 5 below 1024.
+ * Return: 0
  */
-
 int main(void)
 {
-	int num, sum;
-	sum = 0;
+	int i = 1;
+	int total = 0;
 
-	for (num = 0; num < 1024; num++)
+	while (i < 1024)
 	{
-		if ((num % 3 == 0) && (num % 5 ==0))
-		{
-			sum += num;
-		}
-}
-printf("%d\n", sum);
+		if (i % 3 == 0)
+			total += i;
+		else if (i % 5 == 0)
+			total += i;
 
-return (0);
+		i++;
+	}
+	printf("%d\n", total);
+
+	return (0);
 }

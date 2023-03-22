@@ -1,21 +1,12 @@
 #include "main.h"
 
 /**
- * int_add - adds two integers
- * @num1: integer 1
- * @num2: integer 2
- *
- * Description: Give two tntegers and return a result
- * Return: This returns a value
+ * add - Add two integers
+ * @x: int type number
+ * @y: int type number
+ * Return: result of addition
  */
-
-int add(int, int)
+int add(int x, int y)
 {
-	int num1;
-	int num2;
-	int result;
-
-	result = num1 + num2;
-	return (result);
+	return (x + y);
 }
-
