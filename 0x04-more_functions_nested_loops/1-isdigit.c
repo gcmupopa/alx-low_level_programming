@@ -1,16 +1,19 @@
-#include "main.h"
+#include <stdio.h>
+
+void print_alphabet(void);
 
 /**
- * _isdigit - checks for digithood
- * @c: character to checked for digit membership
- *
- * Return: 1 if digit, 0 if not digit
- */
+* _isdigit - print a value
+* @c: input parameter
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
+	{
 		return (1);
-	else
-		return (0);
+	}
+	return (0);
 }

@@ -1,31 +1,25 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * more_numbers - prints numbers 0-14 ten times
- *
- * Return: void
- */
+* more_numbers - print a value
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 void more_numbers(void)
 {
-	int c;
-	int c1;
-	int i;
+	int i, numbers;
 
 	for (i = 1; i <= 10; i++)
 	{
+		for (numbers = 0; numbers <= 14; numbers++)
 		{
-		for (c = 48; c < 58; c++)
-		{
-			_putchar(c);
-		}
-
-		c1 = 49;
-		for (c1 = 48; c1 <= 52; c1++)
-		{
-			_putchar(c);
-			_putchar(c1);
-		}
+			if (numbers > 9)
+			{
+				_putchar((numbers / 10) + '0');
+			}
+			_putchar((numbers % 10) + '0');
 		}
 		_putchar('\n');
 	}

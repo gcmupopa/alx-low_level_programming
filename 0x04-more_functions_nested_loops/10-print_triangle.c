@@ -1,26 +1,34 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle
- * @size: length of sides minus hypotenuse
- *
- * Return: void
- */
+* print_triangle - print a value
+* @size: input value
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 void print_triangle(int size)
 {
-	int i, j;
+	int i, s, p;
 
-	for (i = 1; i <= size; i++)
+	if (size <= 0)
 	{
-		for (j = size; j > i; j--)
-		{
-			_putchar(' ');
-		}
-		for (j = 1; j <= i; j++)
-		{
-			_putchar('#');
-		}
 		_putchar('\n');
+	}
+	else
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (s = size - i; s > 1; s--)
+			{
+				_putchar(32);
+			}
+			for (p = 0; p <= i; p++)
+			{
+				_putchar(35);
+			}
+			_putchar('\n');
+		}
 	}
 }

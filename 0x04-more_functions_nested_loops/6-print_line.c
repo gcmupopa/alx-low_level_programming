@@ -1,22 +1,27 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_line - prints a line of _ n long
- * @n: length of line
- *
- * Return: void
- */
+* print_line - print a value
+* @n: input value
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 void print_line(int n)
 {
 	int i;
 
-	for (i = 0; i <= n; i++)
+	if (n <= 0)
 	{
-		if (n <= 0)
-			_putchar('\n');
-		else
-			_putchar('_');
+		_putchar('\n');
 	}
-	_putchar('\n');
+	else
+	{
+		for (i = 0; i < n; i++)
+		{
+			_putchar(95);
+		}
+		_putchar('\n');
+	}
 }

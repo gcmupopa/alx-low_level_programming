@@ -1,26 +1,30 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_square - draws a square
- * @size: length and width of square
- *
- * Return: void
- */
+* print_square - print a value
+* @size: input value
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 void print_square(int size)
 {
-	int i, j;
+	int i, p;
 
-	for (i = 1; i <= size; i++)
+	if (size <= 0)
 	{
-		for (j = 1; j <= size; j++)
-		{
-			if (size <= 0)
-				_putchar('\n');
-			else
-				_putchar('#');
-		}
 		_putchar('\n');
 	}
+	else
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (p = 0; p < size; p++)
+			{
+				_putchar(35);
+			}
+			_putchar('\n');
+		}
+	}
 }
-
