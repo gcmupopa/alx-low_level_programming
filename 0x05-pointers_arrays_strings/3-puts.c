@@ -1,16 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _puts - Resetting a value
- * @str: parameter
- * Return: a value
- */
+* _puts - Resetting a value
+* @str: parameter
+* Return: a value
+*/
 
 void _puts(char *str)
 {
-	while (*str != '\0')
+	for (; *str != '\0'; str++)
 	{
 		_putchar(*str);
-		str++;
 	}
+	_putchar('\n');
 }

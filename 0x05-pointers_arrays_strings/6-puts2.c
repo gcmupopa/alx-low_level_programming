@@ -1,18 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * puts2 -  Resetting a value
- * @str: parameter
- * Return: a value
- */
+* puts2 - Resetting a value
+* @str: parameter
+* Return: a value
+*/
 
 void puts2(char *str)
 {
-	int i;
-
-	for (; i <= str[i]; i++)
+	for (; *str != '\0'; str += 2)
 	{
-		if (i % 2 == 0)
-			_putchar(str[i]);
+		_putchar(*str);
 	}
+	_putchar('\n');
 }

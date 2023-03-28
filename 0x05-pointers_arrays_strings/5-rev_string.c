@@ -1,10 +1,11 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * rev_string - Resetting a value
- * @s: parameter
- * Return: a value
- */
+* rev_string - Resetting a value
+* @s: parameter
+* Return: a value
+*/
 
 void rev_string(char *s)
 {

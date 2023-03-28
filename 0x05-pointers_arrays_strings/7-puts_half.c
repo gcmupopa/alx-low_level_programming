@@ -1,43 +1,26 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * puts_half - Resetting a value
- * @str: parameter
- * Return: a value
- */
+* puts_half - Resetting a value
+* @str: parameter
+* Return: a value
+*/
 
-int _strlen(char *str);
 void puts_half(char *str)
 {
-	int length = _strlen(str);
-	int mid = length / 2;
-	int n = (length - 1) / 2;
-	int i;
+	int mid, s_count;
 
-	for (i = mid; i <= str[i]; i++)
+	for (; *str != '\0'; str++)
 	{
-		if (length % 2 == 0)
-			_putchar(str[i]);
-		else
-			_putchar(n);
+		s_count++;
 	}
-}
 
-/**
- * _strlen - Resetting a value
- * @str: parameter
- * Return: a value
- */
+	mid = s_count % 2 == 1 ? (s_count - 1) / 2 : s_count / 2;
 
-int _strlen(char *str)
-{
-	int counter = 0;
-
-	while (*str != '\0')
+	for (; mid < 8; mid++)
 	{
-		str++;
-		counter++;
+		_putchar(str[mid]);
 	}
-	return (counter);
+	_putchar('\n');
 }
-
