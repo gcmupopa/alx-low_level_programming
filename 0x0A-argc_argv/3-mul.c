@@ -15,17 +15,17 @@ int main(int argc, char *argv[])
 	int b = atoi(argv[2]);
 	int sum = a * b;
 
-	for (i = 2; i < argc; i++)
+	if (argc  > 1)
 	{
-		if (argc  > 1)
+		for (i = 1; i < argc; i++)
 		{
 			printf("%d\n", sum);
 		}
-		else
-		{
-			printf("Error");
-			return (1);
-		}
+	}
+	else
+	{
+		printf("Error");
+		return (1);
 	}
 	return (0);
 }
