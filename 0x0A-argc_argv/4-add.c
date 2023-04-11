@@ -12,23 +12,30 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
+	unsigned int g;
+	char *z;
 
-	for (i = 1; i <= argc; i++)
+	if (argc > 1)
 	{
-		if (atoi(argv[i]) > 1)
+		for (i = 1; i < argc; i++)
+			z = argv[i];
+
+		for (g = 0; g < strlen(z); g++)
 		{
-			sum = sum + atoi(argv[i]);
-			printf("%d\n", sum);
+			if (z[g] < 48 || z[g] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else if (atoi(argv[i]) > 0 || atoi(argv[i]) < 9)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			printf("%d\n", 0);
-		}
+		sum += atoi(z);
+		z++;
 	}
-		return (0);
+	printf("%d\n", sum);
+}
+else
+{
+	printf("0\n");
+}
+return (0);
 }
