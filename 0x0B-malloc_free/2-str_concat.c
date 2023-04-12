@@ -45,9 +45,7 @@ char *str_concat(char *s1, char *s2)
 	while (i < le3)
 	{
 		if (i <= len1)
-		
 			ptr[i] = s1[i];
-		
 		if (i >= len1)
 		{
 			ptr[i] = s2[j];

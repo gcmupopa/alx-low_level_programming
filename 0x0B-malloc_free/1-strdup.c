@@ -12,7 +12,7 @@ char *_strdup(char *str)
 {
 	unsigned int i = 0;
 	unsigned int length = 0;
-	char *ptrstr;
+	char *ptrstr = malloc(sizeof(char) * (length + 1));
 
 	if (ptrstr == NULL)
 	{
@@ -22,12 +22,12 @@ char *_strdup(char *str)
 	while (str[length])
 		length++;
 
-	ptrstr = malloc((sizeof(char) * (length + 1));
+	ptrstr = malloc(sizeof(char) * (length + 1));
 
 	if (ptrstr == NULL)
 		return (NULL);
 
-	while ((ptrstr[i] = str[i] != '\0'))
+	while ((ptrstr[i] = str[i]) != '\0')
 			i++;
 
 	return (ptrstr);
