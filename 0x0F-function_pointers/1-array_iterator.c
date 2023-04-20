@@ -13,6 +13,8 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int countree;
 
+	if (array != NULL && action != NULL)
+
 	for (countree = 0; countree < size; countree++)
 	{
 		action(array[countree]);
