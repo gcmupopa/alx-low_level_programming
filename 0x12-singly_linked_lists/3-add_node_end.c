@@ -12,18 +12,39 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	struct node *ptr, *temp;
-	ptr = *head;
-	temp = (struct node*)malloc(sizeof(struct node));
+	char *s_pointer;
+	list_t *lastn;
+	list_t *ptr;
+	int counter = 0;
 
-	temp->str = strdup(str);
-	temp->next = NULL;
-
-	while (*ptr.next != NULL)
+if (str != NULL && head != NULL)
 	{
-		ptr = ptr->next;
-	}
-	ptr->next = temp;
+		s_pointer = (char *)str;
+		while (*s_pointer)
+			counter++;
 
-	return(ptr);
+		lastn = malloc(sizeof(list_t));
+		if (lastn == NULL)
+			return (NULL);
+
+		lastn->str = strdup(str);
+		lastn->len = counter;
+		lastn->next = NULL;
+
+		if (*head != NULL)
+		{
+			ptr = *head;
+			while (ptr->next)
+				ptr = ptr->next;
+
+			ptr->next = lastn;
+			return (ptr);
+		}
+		else
+		{
+			*head = lastn;
+			return (*head);
+		}
+	}
+	return (0);
 }
