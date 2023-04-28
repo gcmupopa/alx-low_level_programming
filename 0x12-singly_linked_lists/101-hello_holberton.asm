@@ -1,7 +1,7 @@
 section .text
-	global _start
+	global main
 
-_start:
+ main:
 	mov edx, len
 	mov ecx, msg
 	mov ebx, 1
@@ -12,6 +12,6 @@ _start:
 
 	int 0x080
 
-section.data
-	msg db "Hello, Holberton", 0xa ; also 10
-	len equ $ -msg
+section .rodata
+	msg: db "Hello, Holberton", 10
+	len: equ $ - msg
