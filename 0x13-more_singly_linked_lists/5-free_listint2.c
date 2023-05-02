@@ -1,0 +1,21 @@
+#include "lists.h"
+
+/**
+ * free_listint2- frees a list
+ * @head: parameter
+ * Return: nothing
+ */
+
+void free_listint2(listint_t **head)
+{
+	listint_t *freeptr, *node;
+
+	node = *head;
+
+	while (node != NULL)
+	{
+		freeptr = node->next;
+		free(node);
+		node = freeptr;
+	}
+}
