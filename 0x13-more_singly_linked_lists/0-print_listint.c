@@ -11,6 +11,8 @@ size_t print_listint(const listint_t *h)
 	size_t number_nodes = 0;
 	const listint_t *ptr;
 
+	ptr = malloc(sizeof(listint_t));
+
 	ptr = h;
 
 	if (ptr == NULL)

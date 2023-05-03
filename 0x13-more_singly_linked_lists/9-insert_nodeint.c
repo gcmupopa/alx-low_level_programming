@@ -35,5 +35,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	newnode->next = cnode->next;
 	cnode->next = newnode;
 
+	if (newnode == NULL)
+	{
+		return (NULL);
+	}
 	return (newnode);
 }

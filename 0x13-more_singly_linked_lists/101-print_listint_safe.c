@@ -18,5 +18,9 @@ size_t print_listint_safe(const listint_t *head)
 		printf("[%p] %d\n", (void *)ptr->next, ptr->n);
 		number_nodes++;
 	}
+	if (number_nodes == 0)
+	{
+		exit(98);
+	}
 	return (number_nodes);
 }
