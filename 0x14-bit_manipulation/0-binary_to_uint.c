@@ -8,17 +8,17 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result;
-	unsigned int count;
+	unsigned int result = 0;
+	int count = 0;
 
 	while (*(b + count) != 0)
 	{
 		result <<= 1;
-		if ((*b + count) == '1')
+		if (*(b + count) == '1')
 		{
 			result |= 1;
 		}
-		else if ((*b + count) == '0')
+		else if (*(b + count) != '0')
 		{
 			return (0);
 		}
