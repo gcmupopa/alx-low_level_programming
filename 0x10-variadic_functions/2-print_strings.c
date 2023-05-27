@@ -17,14 +17,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(strlist, n);
 
+	const char *str = va_arg(strlist, const char *);
+
 	if (separator != NULL)
 	{
 		for (count = 0; count < n; count++)
 		{
-			const char *str = va_arg(strlist, const char *);
-			
 			printf("%s", str);
-			
 			if (count < n - 1)
 				printf("%s", separator);
 		}
