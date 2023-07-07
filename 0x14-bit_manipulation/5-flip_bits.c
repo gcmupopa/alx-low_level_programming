@@ -10,7 +10,10 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long xor_outc = n ^ m, count = 0;
+	unsigned long xor_outc, count;
+
+	xor_outc = n ^ m;
+	count = 0;
 	while (xor_outc != 0)
 	{
 		count += xor_outc & 1;

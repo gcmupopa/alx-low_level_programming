@@ -9,8 +9,10 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int bit, mask = 1 << index;
+	unsigned long int bit;
+	int mask;
 	
+	mask = 1 << index;
 	if ((n & mask) == 0)
 	{
 		bit = 0;
