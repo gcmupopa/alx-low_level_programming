@@ -47,6 +47,3 @@ void copyf(const char *so, const char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't close %s\n", dest);
 	}
 }
-
-
-
