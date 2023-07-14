@@ -47,3 +47,21 @@ void copyf(const char *so, const char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't close %s\n", dest);
 	}
 }
+
+/**
+ * main - check the code
+ * @ac: parameter
+ * @av: parameter
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+	if (ac < 3)
+	{
+		return (-1);
+	}
+
+	copyf(av[1], av[2]);
+	return (0);
+}
+
