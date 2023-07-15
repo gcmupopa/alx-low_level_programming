@@ -29,6 +29,11 @@ void showelf(const char *file)
 		printerror("Cannot open file");
 	}
 
+	if (lseek(fd, 0, SEEK_SET) == -1)
+	{
+		printerror("Cannot seek to begin of file");
+	}
+
 	if (read(fd, &head, sizeof(head)) != sizeof(head))
 	{
 		printerror("Cannot read elf header");
