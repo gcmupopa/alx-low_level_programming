@@ -56,7 +56,7 @@ void copyf(const char *so, const char *dest)
  */
 int main(int ac, char **av)
 {
-	if (ac < 3)
+	if (ac != 3)
 	{
 		return (-1);
 	}
