@@ -29,7 +29,7 @@ void showelf(const char *file)
 		printerror("Cannot open file");
 	}
 
-	if (read(fd, &head, sizeof(head) != sizeof(head)))
+	if (read(fd, &head, sizeof(head)) != sizeof(head))
 	{
 		printerror("Cannot read elf header");
 	}
