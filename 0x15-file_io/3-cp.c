@@ -1,6 +1,17 @@
 #include "main.h"
 
 /**
+ * printerror()- prints error message
+ * @Msg: error message to be printed
+ * Return: nothing
+ */
+
+void printerror(char *Msg)
+{
+	printf("Error: %s\n", Msg);
+}
+
+/**
  * copyf()-copies the content of a file to another file
  * @so: source file
  * @dest: destination file
@@ -15,36 +26,42 @@ void copyf(const char *so, const char *dest)
 	fd0 = open(so, O_RDONLY);
 	if (fd0 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read %s\n", so);
+		printerror("Cannat read source file");
+		exit(98);
 	}
 
 	fd1 = open(dest, O_WRONLY | O_CREAT | O_TRUNC, 664);
 	if (fd1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write %s\n", dest);
+		printerror("Cannot write to dest file");
+		exit(99);
 	}
 
 	while ((n = read(fd0, buffer, BUFFER)) > 0)
 	{
 		if (write(fd1, buffer, n) != n)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write %s\n", dest);
+			printerror("Cannot write to file");
+			exit(99);
 		}
 	}
 
 	if (n == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read %s\n", so);
+		printerror("Cannot read file");
+		exit(98);
 	}
 
 	if (close(fd0) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %s\n", so);
+		printerror("Cannot close file descriptor");
+		exit(100);
 	}
 
 	if (close(fd1) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %s\n", dest);
+		printerror("Cannot close file descriptor");
+		exit(100);
 	}
 }
 
