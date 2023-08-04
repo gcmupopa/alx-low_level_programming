@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * set_bit() - sets value of bit to 1 at qiven index
+ * set_bit()- sets value of bit to 1 at qiven index
  * @n: pointer to integer with bit to be set
  * @index: index starting from o of the bit you want to set
  * Return: 1 or -1 if error
