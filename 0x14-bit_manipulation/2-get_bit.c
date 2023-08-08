@@ -7,9 +7,12 @@
  * Return: value of bit at index or -1 if error occured
  */
 
-int get_bit (unsigned long int n, unsigned int index)
+
+int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int num_bits = sizeof(long int) * CHAR_BIT, bit, mask;
+	unsigned long int bit, mask, num_bits = sizeof(long int) * CHAR_BIT;
+	
+
 	if (index < num_bits)
 	{
 		mask = 1 << index;

@@ -25,6 +25,7 @@ void print_binary(unsigned long int n)
 	{
 		mask = 1 << i;
 		if ((n&mask) != 0)
+
 		{
 			bit_pos = i;
 			break;
