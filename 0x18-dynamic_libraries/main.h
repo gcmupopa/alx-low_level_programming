@@ -50,5 +50,5 @@ int _abs(int n);
 int _islower(int c);
 
 int _isalpha(int c);
-#endif 
+#endif
 
