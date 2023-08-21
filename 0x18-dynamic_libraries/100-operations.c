@@ -10,7 +10,7 @@
 
 int add(int a, int b)
 {
-        return (a + b);
+	return (a + b);
 }
 
 /**
@@ -22,7 +22,7 @@ int add(int a, int b)
 
 int sub(int a, int b)
 {
-        return (a - b);
+	return (a - b);
 }
 
 /**
@@ -34,7 +34,7 @@ int sub(int a, int b)
 
 int mul(int a, int b)
 {
-        return (a * b);
+	return (a * b);
 }
 
 /**
@@ -43,10 +43,9 @@ int mul(int a, int b)
  * @b: parameter
  * Return: value
  */
-
 int divy(int a, int b)
 {
-        return (a / b);
+	return (a / b);
 }
 
 /**
@@ -58,6 +57,6 @@ int divy(int a, int b)
 
 int mod(int a, int b)
 {
-        return (a % b);
+	return (a % b);
 }
 
