@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * add- returns the sum of 2 numbers
@@ -38,12 +37,12 @@ int mul(int a, int b)
 }
 
 /**
- * divy- returns the dvision of 2 numbers
+ * div- returns the dvision of 2 numbers
  * @a: parameter
  * @b: parameter
  * Return: value
  */
-int divy(int a, int b)
+int div(int a, int b)
 {
 	return (a / b);
 }
